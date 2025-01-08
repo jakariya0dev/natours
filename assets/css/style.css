@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap');
+
 :root {
     --Light-green: #7ed56f;
     --Medium-green: #55c57a;
@@ -18,15 +20,25 @@
 
 html,
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+
     font-size: 10px;
     line-height: 1.2;
     font-weight: 400;
 }
 
 p {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin: 1rem 0 2rem 0;
+    font-family: "Open Sans", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Roboto", serif;
 }
 
 h4 {
@@ -64,7 +76,7 @@ h4 {
     transition: all 300ms;
 }
 
-.section-title:hover{
+.section-title:hover {
     transform: skew(15deg, 1deg);
 }
 
@@ -218,7 +230,7 @@ h4 {
 #about {
     background-color: var(--light-bg);
     margin-top: -15vh;
-    padding: 15rem 0;
+    padding: 18rem 0;
 }
 
 .about-content {
@@ -281,6 +293,60 @@ h4 {
 .about-img:hover img:not(:hover) {
     transform: scale(.8);
     opacity: .8;
-    
+
 }
+
 /* About End */
+
+/* Tour Start */
+
+#feature {
+    background-color: #78968c;
+    background-image: linear-gradient(to right, #7ed56fd2, #28b485d3), url('./../img/gal-1.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 15rem 0;
+    transform: skewY(-5deg);
+    margin-top: -6.5rem;
+}
+
+#feature > * {
+    transform: skewY(5deg);
+}
+
+#feature .section-title{
+    color: white;
+    margin-bottom: 3.5rem;
+}
+
+
+
+.feature-cards {
+    display: flex;
+    gap: 5rem;
+}
+
+.feature-card-item {
+    background-color: rgb(255, 255, 255);
+    padding: 5rem 4rem;
+    text-align: center;
+    transition: all 300ms;
+    border-radius: .4rem;
+}
+
+.feature-card-item:hover{
+    transform: translateY(-2rem);
+}
+.feature-card-item > i{
+    font-size: 5rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    background-image: linear-gradient(to right, var(--Dark-green), var(--Light-green));
+    background-clip: text;
+    color: transparent;
+}
+
+.feature-card-item > h4 {
+    margin-bottom: 1.5rem;
+}
+/* Tour End */
