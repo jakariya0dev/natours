@@ -163,6 +163,11 @@ h4 {
     }
 }
 
+.btn{
+    text-decoration: none;
+    display: inline-block;
+}
+
 .btn-white:link,
 .btn-white:visited {
     display: inline-block;
@@ -230,7 +235,7 @@ h4 {
 #about {
     background-color: var(--light-bg);
     margin-top: -15vh;
-    padding: 18rem 0;
+    padding: 25rem 0;
 }
 
 .about-content {
@@ -298,23 +303,23 @@ h4 {
 
 /* About End */
 
-/* Tour Start */
+/* feature Start */
 
 #feature {
     background-color: #78968c;
     background-image: linear-gradient(to right, #7ed56fd2, #28b485d3), url('./../img/gal-1.jpeg');
     background-size: cover;
     background-position: center;
-    padding: 15rem 0;
+    padding: 25rem 0;
     transform: skewY(-5deg);
     margin-top: -6.5rem;
 }
 
-#feature > * {
+#feature>* {
     transform: skewY(5deg);
 }
 
-#feature .section-title{
+#feature .section-title {
     color: white;
     margin-bottom: 3.5rem;
 }
@@ -334,10 +339,11 @@ h4 {
     border-radius: .4rem;
 }
 
-.feature-card-item:hover{
+.feature-card-item:hover {
     transform: translateY(-2rem);
 }
-.feature-card-item > i{
+
+.feature-card-item>i {
     font-size: 5rem;
     display: inline-block;
     margin-bottom: 2rem;
@@ -346,7 +352,121 @@ h4 {
     color: transparent;
 }
 
-.feature-card-item > h4 {
+.feature-card-item>h4 {
     margin-bottom: 1.5rem;
 }
-/* Tour End */
+
+/* feature End */
+
+/* Tours Start */
+
+#tours {
+    margin-bottom: 5rem;
+    padding: 15rem 0;
+}
+
+.tour-cards {
+    padding: 0 20rem;
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+}
+
+.tour-cards .card {
+    flex-grow: 1;
+    /* background-color: rgb(146, 108, 108); */
+    filter: drop-shadow(2px 2px 3px 2px black);
+    text-align: center;
+    position: relative;
+    overflow: hidden~;
+    filter: drop-shadow(2px 2px 12px rgba(0, 0, 0, 0.5));
+
+
+    .front {
+        background-color: white;
+        transition: all 500ms;
+        perspective: 150rem;
+        backface-visibility: hidden;
+
+        .heading{
+            position: relative;
+            
+
+            img {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                    object-position: center;
+                    clip-path: polygon(0 0, 100% 0, 100% 150px, 0 100%);
+                    mix-blend-mode: darken;
+                }
+
+            p{
+                position: absolute;
+                right: 0;
+                bottom: 1rem;
+                text-align: right;
+                background: linear-gradient(to top, rgba(0, 128, 0, 0.897), rgba(0, 128, 0, 0.788));
+                color: white;
+                font-size: 2.5rem;
+                text-transform: uppercase;
+                padding: 1rem;
+                /* width: 70%; */
+
+                /* span{
+                    box-decoration-break: clone;
+                    padding: 1rem 1.5rem;
+                    background-color: red;
+                } */
+            }
+
+        }
+        
+
+        .body{
+            padding: 2rem 5rem;
+        } 
+        
+    }
+
+    &:hover .front {
+        transform: rotateY(180deg);
+    }
+
+    .back {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background-color: orangered;
+        transform: rotateY(180deg);
+        transition: all 500ms;
+        perspective: 150rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+
+        .title{
+            font-size: 2rem;
+        }
+        .price{
+            font-size: 6rem;
+        }
+
+        
+    }
+
+    &:hover .back {
+        transform: rotateY(0deg);
+    }
+
+
+}
+
+
+/* Tours End */
