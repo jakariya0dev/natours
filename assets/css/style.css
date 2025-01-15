@@ -24,6 +24,7 @@ body {
     font-size: 10px;
     line-height: 1.2;
     font-weight: 400;
+    font-family: "Open Sans", serif;
 }
 
 p {
@@ -46,7 +47,7 @@ h4 {
     color: var(--dark-txt);
 }
 
-img{
+img {
     width: 100%;
 }
 
@@ -167,7 +168,7 @@ img{
     }
 }
 
-.btn{
+.btn {
     text-decoration: none;
     display: inline-block;
 }
@@ -179,7 +180,7 @@ img{
     color: #777;
     padding: 0.5rem 1.5rem;
     text-decoration: none;
-    transition: all .3s;~
+    transition: all .3s;
 }
 
 .btn-discover {
@@ -352,7 +353,7 @@ img{
     transform: translateY(-2rem);
 }
 
-.feature-card-item > i {
+.feature-card-item>i {
     font-size: 5rem;
     display: inline-block;
     margin-bottom: 2rem;
@@ -382,7 +383,7 @@ img{
 }
 
 .tour-cards .card {
-    flex-grow: 1;   
+    flex-grow: 1;
     /* background-color: rgb(146, 108, 108); */
     filter: drop-shadow(2px 2px 3px 2px black);
     text-align: center;
@@ -397,20 +398,20 @@ img{
         perspective: 150rem;
         backface-visibility: hidden;
 
-        .heading{
+        .heading {
             position: relative;
-            
+
 
             img {
-                    width: 100%;
-                    height: 200px;
-                    object-fit: cover;
-                    object-position: center;
-                    clip-path: polygon(0 0, 100% 0, 100% 150px, 0 100%);
-                    mix-blend-mode: darken;
-                }
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                object-position: center;
+                clip-path: polygon(0 0, 100% 0, 100% 150px, 0 100%);
+                mix-blend-mode: darken;
+            }
 
-            p{
+            p {
                 position: absolute;
                 right: 0;
                 bottom: 1rem;
@@ -430,12 +431,12 @@ img{
             }
 
         }
-        
 
-        .body{
+
+        .body {
             padding: 2rem 5rem;
-        } 
-        
+        }
+
     }
 
     &:hover .front {
@@ -460,14 +461,15 @@ img{
         justify-content: center;
         color: white;
 
-        .title{
+        .title {
             font-size: 2rem;
         }
-        .price{
+
+        .price {
             font-size: 6rem;
         }
 
-        
+
     }
 
     &:hover .back {
@@ -483,18 +485,18 @@ img{
 
 /* Customer Start */
 
-#customer{
-    
+#customer {
+
     position: relative;
 
 }
 
-#customer > .container{
+#customer>.container {
     padding: 10rem 0;
     text-align: center;
 }
 
-.customer-card{
+.customer-card {
     padding: 5rem 8rem;
     background-color: #ffffffbd;
     width: 75%;
@@ -503,11 +505,11 @@ img{
     margin: auto;
     margin-bottom: 8rem;
 
-    & > * {
+    &>* {
         transform: skewX(15deg);
     }
 
-    figure{
+    figure {
         float: left;
         width: 15rem;
         height: 15rem;
@@ -517,10 +519,10 @@ img{
         overflow: hidden;
         margin-right: 2rem;
         border-radius: 50%;
-        
 
-        img{
-            
+
+        img {
+
             width: 100%;
             height: 100%;
             transform: scale(1.2);
@@ -528,7 +530,7 @@ img{
             transition: all 300ms;
         }
 
-        figcaption{
+        figcaption {
             position: absolute;
             transition: all 300ms;
             top: 80%;
@@ -541,19 +543,19 @@ img{
         }
     }
 
-    .testimonial{
-        h4{
+    .testimonial {
+        h4 {
             font-size: 2.5rem;
         }
     }
 
-    &:hover{
-        img{
+    &:hover {
+        img {
             filter: blur(8px) brightness(70%);
             transform: scale(1);
         }
 
-        figcaption{
+        figcaption {
             top: 50%;
             left: 50%;
             opacity: 1;
@@ -561,7 +563,7 @@ img{
         }
     }
 
-        
+
 
 }
 
@@ -581,4 +583,140 @@ img{
         filter: brightness(80%);
     }
 }
+
 /* Customer End */
+
+/* Booking Section Start */
+section#booking {
+    padding: 15rem 0;
+    background: linear-gradient(to right, var(--Dark-green), var(--Light-green));
+
+    .booking-card {
+        background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.91) 0%, rgba(255, 255, 255, 0.91) 50%, transparent 50%), url('./../img/gal-10.jpeg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 5rem;
+
+        .booking-form {
+            /* background-color: #28b485; */
+            width: 40%;
+
+            .section-title {
+                text-align: left;
+                margin-bottom: 1rem;
+            }
+
+            .form-group {
+
+                margin-top: 1.5rem;
+
+                input {
+                    display: block;
+                    width: 100%;
+                    padding: 1.5rem;
+                    border: none;
+                    border-radius: 4px;
+                    font-size: 1.5rem;
+                    border-bottom: 3px solid transparent;
+                    margin-bottom: 0.8rem;
+
+                    &:focus {
+                        border-bottom: 3px solid var(--Dark-green);
+                    }
+
+                    &:placeholder-shown+label {
+                        opacity: 0;
+                        visibility: hidden;
+                        transform: translateY(-15px);
+                    }
+
+                }
+
+                label {
+                    opacity: 1;
+                    margin-left: 1.5rem;
+                    font-size: 1.6rem;
+                    transition: all 300ms;
+                }
+
+                input[type="submit"] {
+                    background-color: var(--Light-green);
+                    transition: all 300ms;
+                }
+
+                input[type="submit"]:hover {
+                    filter: brightness(80%);
+                }
+
+
+            }
+
+
+        }
+
+
+
+
+
+    }
+}
+
+/* Booking Section End */
+
+/* Footer Start */
+
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 10rem 20rem;
+    color: white;
+    font-size: 1.8rem;
+    
+    div{
+        display: flex;
+        justify-content: space-evenly;
+
+        .foot-menu{
+            width: 30%;
+            padding-top: 1.5rem;
+            border-top: 1px solid #fff;
+            text-align: left;
+
+            a{
+                text-decoration: none;
+                text-transform: uppercase;
+                color: white;
+                display: inline-block;
+                margin-right: 1rem;
+                font-size: 1.5rem;
+                font-family: inherit;
+                /* padding: 5px; */
+            }
+
+            a:hover{
+                color: var(--Dark-green);
+            }
+        }
+
+        .foot-content{
+            width: 30%;
+            text-align: left;
+            border-top: 1px solid #fff;
+            padding-top: 1.5rem;
+            font-family: inherit;
+            font-size: 1.4rem;
+            line-height: 1.5;
+        }
+    }
+
+
+
+    img {
+        width: 30rem;
+        margin-bottom: 5rem;
+
+    }
+}
+
+/* Footer End */
